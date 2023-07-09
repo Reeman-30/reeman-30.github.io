@@ -1,0 +1,244 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body {
+    font-family: 'quicksandregular', 'Times New Roman', serif;
+    background-image: url(../img/webb.png);
+}
+
+/* Navbar */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #40739e;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav .author {
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 70px;
+    padding: 0 60px;
+    color: #ffffff;
+    box-sizing: border-box;
+}
+
+nav ul {
+    line-height: 70px;
+    display: flex;
+}
+
+nav ul li a {
+    font-size: 18px;
+    text-decoration: none;
+    padding: 25px;
+    justify-content: space-evenly;
+    color: #dadada;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    border-bottom: 2px solid #87cefa;
+}
+
+nav ul li i {
+    margin-right: -20px;
+}
+
+nav .menu-bar {
+    font-size: 25px;
+    line-height: 70px;
+    color: #ffffff;
+    display: none;
+}
+
+.btn {
+    background: none;
+    border: none;
+    color: #ffffff;
+    padding: 5px;
+    width: 100px;
+    border: 2px solid #000000;
+    border-radius: 23px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #87cefa;
+    color: #000000;
+}
+
+.dark {
+    background-image: url(../img/webb-dark.png);
+}
+
+.nav-dark {
+    background-color: #353b48;
+}
+
+/* Main Content */
+
+.container {
+    width: 850px;
+    background-color: #f3f1f1;
+    margin: 100px auto;
+}
+
+.container-dark {
+    background-color: #3d3131;
+    color: #ffffff;
+}
+
+.border-white {
+    border-bottom: 2px solid #ffffff;
+}
+
+.container .content-author {
+    font-size: 35px;
+    padding: 25px;
+    font-weight: bold;
+    box-sizing: border-box;
+    border-bottom: 2px solid #292828;
+}
+
+.container .img {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.container .content {
+    margin: 12px 0;
+    text-align: justify;
+    text-indent: 25px;
+    line-height: 25px;
+    padding: 25px;
+}
+
+.container footer {
+    height: 50px;
+    background-color: #008b8b;
+    line-height: 50px;
+    text-align: center;
+}
+
+.container footer .copyright {
+    color: #ffffff;
+}
+
+#check {
+    display: none;
+}
+
+/* Responsive */
+
+@media ( max-width: 840px ) {
+    nav .author {
+        font-size: 20px;
+    }
+    nav ul li a {
+        font-size: 16px;
+    }
+    .container {
+        width: 560px;
+    }
+}
+
+@media ( min-width: 320px ) and ( max-width: 780px ) {
+    nav .menu-bar {
+        margin-right: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+        color: #ffffff;
+    }
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        position: fixed;
+        background-color: #3c6382;
+        width: 100%;
+        height: 50%;
+        top: 70px;
+        right: -100%;
+        text-align: center;
+        line-height: 60px;
+        transition: 0.6s;
+        opacity: 0.9;
+    }
+    nav ul li i {
+        position: relative;
+        left: -23%;
+    }
+    nav ul li a, nav ul li #mode {
+        color: #000000;
+        position: relative;
+        text-align: center;
+        left: -23%;
+        font-weight: bolder;
+    }
+    .container {
+        width: 430px;
+    }
+    #check:checked ~ ul {
+        right: -50%;
+    }
+}
+
+/* Font */
+
+@font-face {
+    font-family: 'quicksandregular';
+    src: url('../fonts/quicksand-regular-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
